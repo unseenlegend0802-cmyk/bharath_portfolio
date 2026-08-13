@@ -6,15 +6,15 @@ const details = [
   {
     icon: Mail,
     label: "Email",
-    value: "revathi9690@gmail.com",
-    href: "mailto:revathi9690@gmail.com",
+    value: "kottapallibharath097@gmail.com",
+    href: "mailto:kottapallibharath097@gmail.com",
   },
-  { icon: Phone, label: "Phone number", value: "+91 93909 62104", href: "tel:+919390962104" },
+  { icon: Phone, label: "Phone number", value: "+91 79937 96846", href: "tel:+917993796846" },
   {
     icon: MapPin,
     label: "Location",
-    value: "Wanaparthy, Telangana – 509206, India",
-    href: "https://maps.google.com/?q=Wanaparthy,Telangana",
+    value: "Viraatnagar Colony, Taallagadda, Hyderabad – 500006, India",
+    href: "https://maps.google.com/?q=Viraatnagar+Colony+Hyderabad",
   },
 ];
 
@@ -78,7 +78,7 @@ export function Contact() {
               </a>
             ))}
             <a
-              href="https://linkedin.com/in/revally-revathi-075909337"
+              href="https://linkedin.com/in/kottapallibharath7993796846"
               target="_blank"
               rel="noreferrer"
               className="card-surface grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 p-5"
@@ -86,7 +86,7 @@ export function Contact() {
               <span className="min-w-0">
                 <span className="block text-sm font-semibold">LinkedIn</span>
                 <span className="block truncate text-sm text-muted-foreground">
-                  revally-revathi-075909337
+                  kottapallibharath7993796846
                 </span>
               </span>
               <ArrowUpRight className="size-4 shrink-0 text-muted-foreground" />

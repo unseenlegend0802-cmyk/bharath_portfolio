@@ -5,22 +5,22 @@ const highlights = [
   {
     icon: Target,
     title: "Career objective",
-    body: "Seeking an entry-level internship where I can apply programming and analytical skills and grow in a dynamic environment.",
+    body: "Aspiring Mechanical Design Engineer seeking to contribute to innovative aerospace and mechanical organizations.",
   },
   {
     icon: Brain,
     title: "Focus areas",
-    body: "Data analysis, machine learning, data visualization and emerging AI technologies.",
+    body: "CAD/CAE, finite element analysis, CFD, thermal systems, rocket design and product development.",
   },
   {
     icon: Users,
-    title: "Activities",
-    body: "Documentation Writer at the IEI Student Chapter, VBIT · GDG on Campus Solution Challenge 2025 participant.",
+    title: "Experience",
+    body: "Project Trainee at ISRO-ISTRAC, Rocket Design Intern at Feynman Aerospace and CAD Engineer Trainee at Altimech Engineering Solutions.",
   },
   {
     icon: Languages,
     title: "Languages",
-    body: "Telugu (native, fluent) and English (fluent).",
+    body: "Telugu (native, fluent), English (fluent), Hindi (professional) and Tamil (beginner).",
   },
 ];
 
@@ -30,8 +30,8 @@ export function About() {
       <div className="mx-auto max-w-6xl px-5">
         <SectionHeading light="About" accent="Me" />
         <p className="mx-auto mt-4 max-w-2xl text-center text-sm text-muted-foreground">
-          Motivated Information Technology undergraduate with a strong interest in data analysis and
-          emerging technologies, driven to contribute to organizational success.
+          Mechanical Engineering undergraduate with hands-on experience in CAD/CAE, FEA and thermal
+          systems analysis, focused on mechanical systems design and simulation.
         </p>
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2">

@@ -28,7 +28,7 @@ export function Navbar() {
     >
       <nav className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4 md:flex md:justify-between">
         <a href="#home" className="truncate font-display text-lg font-semibold tracking-tight">
-          Revathi<span className="text-primary">.</span>
+          Bharath<span className="text-primary">.</span>
         </a>
 
         <ul className="hidden items-center gap-7 text-sm text-muted-foreground md:flex">

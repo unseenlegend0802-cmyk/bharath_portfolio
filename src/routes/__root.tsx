@@ -77,13 +77,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Revally Revathi — Data Science Portfolio" },
+      { title: "Kottapalli Bharath — Mechanical Design Portfolio" },
       {
         name: "description",
         content:
-          "Portfolio of Revally Revathi, B.Tech Data Science student and aspiring data analyst.",
+          "Portfolio of Kottapalli Bharath, Mechanical Engineering student specialising in CAD/CAE, FEA and thermal analysis.",
       },
-      { name: "author", content: "Revally Revathi" },
+      { name: "author", content: "Kottapalli Bharath" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

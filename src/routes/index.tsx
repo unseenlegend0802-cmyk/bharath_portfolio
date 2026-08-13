@@ -7,9 +7,9 @@ import { Projects } from "@/components/portfolio/Projects";
 import { Education } from "@/components/portfolio/Education";
 import { Contact } from "@/components/portfolio/Contact";
 
-const title = "Revally Revathi — Data Science Student & Data Analyst";
+const title = "Kottapalli Bharath — Mechanical Design Engineer";
 const description =
-  "Portfolio of Revally Revathi, B.Tech Data Science student skilled in Python, SQL, Power BI and machine learning. View projects, skills and contact details.";
+  "Portfolio of Kottapalli Bharath, Mechanical Engineering student skilled in SolidWorks, CATIA, CREO, ANSYS, FEA and CFD. ISRO-ISTRAC intern. View projects and contact.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -39,7 +39,7 @@ function Index() {
       </main>
       <footer className="border-t border-border py-8">
         <p className="text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Revally Revathi. Built with care.
+          © {new Date().getFullYear()} Kottapalli Bharath. Built with care.
         </p>
       </footer>
     </div>

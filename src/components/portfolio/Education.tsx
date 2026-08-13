@@ -3,36 +3,45 @@ import { SectionHeading } from "./SectionHeading";
 
 const education = [
   {
-    school: "Vignana Bharathi Institute of Technology (VBIT)",
-    place: "Hyderabad, TS",
-    period: "Expected April 2027",
-    degree: "B.Tech, Data Science",
-    gpa: "8.03 / 10.0",
-    course:
-      "Python Programming, SQL, Machine Learning, Data Analytics, Data Visualization, Statistics, Pandas, NumPy, AI Fundamentals.",
+    school: "Hindustan Institute of Technology and Science (HITS)",
+    place: "Chennai, TN",
+    period: "Expected April 2026",
+    degree: "B.E., Mechanical Engineering",
+    gpa: "8.88 / 10.0",
+    course: "Thermodynamics, Strength of Materials, CAD/CAE, Heat and Mass Transfer, FEM.",
+  },
+  {
+    school: "Central Institute of Plastics Engineering & Technology (CIPET)",
+    place: "Secunderabad, TS",
+    period: "Aug 2021 – Jan 2023",
+    degree: "Post Diploma in Plastic Mold Design using CAD/CAM",
+    gpa: "9.14 / 10.0",
+    course: "Plastic Materials, Mold Design, Product Design, Rapid Prototyping, CNC Machining.",
   },
   {
     school: "Government Polytechnic College, Masabtank",
     place: "Hyderabad, TS",
-    period: "Jun 2021 – Apr 2024",
-    degree: "Diploma in Electrical and Electronics Engineering",
-    gpa: "9.43 / 10.0",
+    period: "Jun 2018 – Apr 2021",
+    degree: "Diploma in Automobile Engineering",
+    gpa: "9.2 / 10.0",
     course:
-      "Electrical Machines, Power Systems, Power Electronics, Digital Electronics, Control Systems, Industrial Automation, PLC Fundamentals.",
-  },
-  {
-    school: "Gurukula Social Welfare",
-    place: "Alampur, Gadwal dist, TS",
-    period: "Jun 2015 – Mar 2021",
-    degree: "Matriculation – graduated with distinction",
-    gpa: "10.0 / 10.0",
-    course: "Foundation in science and mathematics.",
+      "Thermal Engineering, Automobile Electrical Systems, CAD, Basics of Automobile Engineering.",
   },
 ];
 
 const certifications = [
-  "Getting Started with Artificial Intelligence — IBM SkillsBuild",
-  "Programming Essentials in Python — Cisco Networking Academy",
+  "Academic Excellence Award 2025–26 (also 2023–24 & 2024–25)",
+  "ISRO-ISTRAC Internship Certificate — 2025",
+  "Rocket Design Internship Certificate — 2024",
+  "PALS Tinkathon 2024–25 — Project workshop at IIT Madras",
+  "ICT Design Week 2025 — Sri Sairam Engineering College, Chennai",
+  "1st Prize — Designography, MechArena, Osmania University — 2023",
+  "AutoCAD 2D & 3D Training (CISTOCADD)",
+  "Matriculation with distinction — Newgen School of Excellence (8.8 / 10)",
+];
+
+const publications = [
+  "“Studies on Radial Ventilated Disc Brake Materials — Effect of Metal Matrix Composite Materials using FEA in Automotive Brake Disc”, Advances in Additive Manufacturing Technologies, Taylor & Francis, 2024.",
 ];
 
 export function Education() {
@@ -66,6 +75,16 @@ export function Education() {
             {certifications.map((c) => (
               <li key={c} className="text-sm text-muted-foreground">
                 • {c}
+              </li>
+            ))}
+          </ul>
+          <h4 className="mt-6 text-sm tracking-widest text-muted-foreground uppercase">
+            Publications
+          </h4>
+          <ul className="mt-2 grid gap-2">
+            {publications.map((p) => (
+              <li key={p} className="text-sm text-muted-foreground">
+                • {p}
               </li>
             ))}
           </ul>
