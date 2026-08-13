@@ -6,8 +6,8 @@ const education = [
     school: "Hindustan Institute of Technology and Science (HITS)",
     place: "Chennai, TN",
     period: "Aug 2023 - May 2026",
-    degree: "B.Tech., Mechanical Engineering",
-    gpa: "9.09 / 10.0",
+    degree: "B.Tech, Mechanical Engineering",
+    gpa: "9.09\u00a0/ 10.0",
     course: "Thermodynamics, Strength of Materials, CAD/CAE, Heat and Mass Transfer, FEM.",
   },
   {
