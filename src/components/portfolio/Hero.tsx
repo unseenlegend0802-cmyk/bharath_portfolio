@@ -89,7 +89,7 @@ export function Hero() {
             </div>
             <div className="card-surface w-fit px-3 py-2 text-center sm:px-4 sm:py-3">
               <p className="font-display text-base font-bold text-primary sm:text-xl md:text-2xl">
-                8.88
+                9.09
               </p>
               <p className="text-[10px] leading-tight text-muted-foreground sm:text-xs">
                 CGPA · B.E. Mechanical Engineering
