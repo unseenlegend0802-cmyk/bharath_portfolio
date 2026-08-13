@@ -92,7 +92,7 @@ export function Hero() {
                 9.09
               </p>
               <p className="text-[10px] leading-tight text-muted-foreground sm:text-xs">
-                CGPA · B.E. Mechanical Engineering
+                CGPA · B.Tech. Mechanical Engineering
               </p>
             </div>
           </div>
