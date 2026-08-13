@@ -1,7 +1,5 @@
 # Bharath_portfolio
 
-import this project from "https://github.com/revathirevally/Revathi_portfolio.git"
-
 This project was built with [Lovable](https://lovable.dev).
 
 ## Build with Lovable
