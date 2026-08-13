@@ -7,7 +7,7 @@ const education = [
     place: "Chennai, TN",
     period: "Expected April 2026",
     degree: "B.E., Mechanical Engineering",
-    gpa: "8.88 / 10.0",
+    gpa: "9.09 / 10.0",
     course: "Thermodynamics, Strength of Materials, CAD/CAE, Heat and Mass Transfer, FEM.",
   },
   {
