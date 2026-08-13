@@ -1,43 +1,43 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
-import { BarChart3, Code2, Database, Sparkles } from "lucide-react";
+import { Boxes, Flame, Ruler, Wind } from "lucide-react";
 
 const groups = [
   {
-    icon: Code2,
-    title: "Programming",
-    body: "Core languages I use to build and automate.",
-    tags: ["Java", "Python", "HTML", "CSS", "Git & GitHub"],
+    icon: Boxes,
+    title: "Design & CAD",
+    body: "3D modelling, detailing and drafting tools I use daily.",
+    tags: ["SolidWorks", "CATIA V5", "CREO Parametric", "AutoCAD", "GD&T"],
   },
   {
-    icon: Database,
-    title: "Data & Databases",
-    body: "Querying, cleaning and shaping data for analysis.",
-    tags: ["SQL", "Pandas", "NumPy", "Microsoft Excel", "Statistics"],
+    icon: Wind,
+    title: "Simulation & Analysis",
+    body: "Validating designs with numerical simulation.",
+    tags: ["ANSYS Workbench", "ANSYS Fluent", "FEM", "CFD", "OpenRocket"],
   },
   {
-    icon: BarChart3,
-    title: "Analytics & Visualization",
-    body: "Turning datasets into dashboards and stories.",
-    tags: ["Power BI", "Data Analytics", "Data Visualization"],
+    icon: Flame,
+    title: "Engineering Expertise",
+    body: "Applied mechanical and thermal engineering.",
+    tags: ["Thermal Analysis", "CAD/CAE", "Rocket Design", "Product Design", "Rapid Prototyping"],
   },
   {
-    icon: Sparkles,
-    title: "AI & Machine Learning",
-    body: "Applying models to real-world problems.",
-    tags: ["Machine Learning", "NLP", "LLMs", "AI Fundamentals"],
+    icon: Ruler,
+    title: "Manufacturing & Tools",
+    body: "From mold design to machining and documentation.",
+    tags: ["Mold Design", "CNC Machining", "Technical Documentation", "MS Office 365"],
   },
 ];
 
 const soft = [
   "Problem Solving",
   "Analytical Thinking",
+  "Attention to Detail",
   "Communication",
   "Teamwork",
   "Time Management",
   "Adaptability",
-  "Critical Thinking",
   "Quick Learning",
 ];
 
