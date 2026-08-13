@@ -39,7 +39,7 @@ function Index() {
       </main>
       <footer className="border-t border-border py-8">
         <p className="text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Revally Revathi. Built with care.
+          © {new Date().getFullYear()} Kottapalli Bharath. Built with care.
         </p>
       </footer>
     </div>
