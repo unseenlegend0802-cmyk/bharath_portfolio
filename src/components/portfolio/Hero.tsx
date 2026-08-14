@@ -1,6 +1,5 @@
 import { ArrowDown, Download, Linkedin, Mail, Sparkles } from "lucide-react";
 import castle from "@/assets/hogwarts-castle.jpg";
-import heroVisual from "@/assets/hero-visual.jpg";
 
 export function Hero() {
   return (
@@ -12,7 +11,7 @@ export function Hero() {
           backgroundImage: `url(${castle})`,
           backgroundSize: "cover",
           backgroundPosition: "center 30%",
-          opacity: 0.42,
+          opacity: 0.55,
           maskImage: "linear-gradient(to bottom, black 20%, transparent 95%)",
           WebkitMaskImage: "linear-gradient(to bottom, black 20%, transparent 95%)",
         }}
@@ -76,7 +75,7 @@ export function Hero() {
                 download="Kottapalli_Bharath_Resume.pdf"
                 className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-semibold tracking-wide text-foreground uppercase transition-colors hover:border-primary hover:text-primary"
               >
-                Scroll <Download className="size-4" />
+                Resume <Download className="size-4" />
               </a>
             </div>
 
@@ -106,8 +105,8 @@ export function Hero() {
           <div className="flex flex-col items-center justify-center gap-3 sm:gap-4">
             <div className="card-surface aspect-square w-full max-w-[160px] overflow-hidden rounded-full p-2 sm:max-w-[280px] md:max-w-[360px] lg:max-w-[440px] xl:max-w-[520px]">
               <img
-                src={heroVisual}
-                alt="Mechanical design and simulation visual representing Kottapalli Bharath's work"
+                src={castle}
+                alt="Illustrated castle fortress under a full moon"
                 width={520}
                 height={520}
                 className="h-full w-full rounded-full object-cover"
