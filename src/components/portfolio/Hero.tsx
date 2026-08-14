@@ -1,35 +1,60 @@
-import { ArrowDown, Download, Linkedin, Mail } from "lucide-react";
-import heroVisual from "@/assets/hero-visual.jpg";
+import { ArrowDown, Download, Linkedin, Mail, Sparkles } from "lucide-react";
+import castle from "@/assets/hogwarts-castle.jpg";
 
 export function Hero() {
   return (
     <section id="home" className="glow-surface relative overflow-hidden pt-32 pb-20 md:pt-40">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center opacity-0 transition-opacity duration-1000 sm:opacity-100"
+        className="pointer-events-none absolute inset-0 -z-10"
         style={{
-          backgroundImage: `radial-gradient(circle at 50% 50%, color-mix(in oklab, var(--primary) 25%, transparent) 0%, transparent 60%), url(${heroVisual})`,
-          backgroundSize: "cover, 45% auto",
-          backgroundPosition: "center, 50% 45%",
-          backgroundRepeat: "no-repeat",
-          filter: "blur(56px) saturate(180%)",
-          maskImage: "radial-gradient(circle, transparent 35%, black 75%)",
-          WebkitMaskImage: "radial-gradient(circle, transparent 35%, black 75%)",
+          backgroundImage: `url(${castle})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center 30%",
+          opacity: 0.55,
+          maskImage: "linear-gradient(to bottom, black 20%, transparent 95%)",
+          WebkitMaskImage: "linear-gradient(to bottom, black 20%, transparent 95%)",
         }}
       />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10"
+        style={{ backgroundImage: "var(--gradient-glow)" }}
+      />
+
+      {/* floating candles */}
+      {[
+        { left: "8%", top: "18%", delay: "0s" },
+        { left: "22%", top: "62%", delay: "1.4s" },
+        { left: "72%", top: "22%", delay: "0.8s" },
+        { left: "88%", top: "56%", delay: "2.1s" },
+      ].map((c) => (
+        <span
+          key={c.left}
+          aria-hidden="true"
+          className="candle-float pointer-events-none absolute hidden size-2 rounded-full bg-primary md:block"
+          style={{
+            left: c.left,
+            top: c.top,
+            animationDelay: c.delay,
+            boxShadow: "0 0 18px 6px color-mix(in oklab, var(--primary) 55%, transparent)",
+          }}
+        />
+      ))}
+
       <div className="mx-auto max-w-6xl px-5">
         <div className="grid grid-cols-2 items-start gap-4 md:items-center md:gap-8 lg:gap-12">
           <div>
-            <p className="pill inline-flex px-4 py-1.5 text-xs font-medium tracking-wide">
-              Hi! I&apos;m Bharath — based in Hyderabad, India
+            <p className="pill inline-flex items-center gap-2 px-4 py-1.5 text-xs font-medium tracking-wide">
+              <Sparkles className="size-3.5" /> Hi! I&apos;m Bharath — based in Hyderabad, India
             </p>
-            <h1 className="mt-4 text-[1.65rem] leading-[1.1] font-bold sm:text-4xl md:text-5xl lg:text-6xl">
+            <h1 className="mt-4 text-[1.65rem] leading-[1.15] font-bold sm:text-4xl md:text-5xl lg:text-6xl">
               Mechanical <br />
-              &amp; <span className="text-primary">Design Engineer</span>
+              &amp; <span className="text-primary flicker">Design Engineer</span>
             </h1>
-            <p className="mt-4 max-w-lg text-sm text-muted-foreground sm:mt-6 sm:text-base">
-              Mechanical Engineering undergraduate with hands-on experience in CAD/CAE, FEA, CFD and
-              thermal systems — including an internship at ISRO-ISTRAC.
+            <p className="mt-4 max-w-lg text-base text-muted-foreground sm:mt-6 sm:text-lg">
+              Where engineering meets a little magic — CAD/CAE, FEA, CFD and thermal systems,
+              including an internship at ISRO-ISTRAC.
             </p>
 
             <div className="mt-6 flex flex-wrap items-center gap-3 sm:mt-8">
@@ -41,14 +66,14 @@ export function Hero() {
               </a>
               <a
                 href="#projects"
-                className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:border-primary hover:text-primary"
+                className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-semibold tracking-wide text-foreground uppercase transition-colors hover:border-primary hover:text-primary"
               >
                 View my work
               </a>
               <a
                 href="/Kottapalli_Bharath_Resume.pdf"
                 download="Kottapalli_Bharath_Resume.pdf"
-                className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:border-primary hover:text-primary"
+                className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-semibold tracking-wide text-foreground uppercase transition-colors hover:border-primary hover:text-primary"
               >
                 Resume <Download className="size-4" />
               </a>
@@ -80,8 +105,8 @@ export function Hero() {
           <div className="flex flex-col items-center justify-center gap-3 sm:gap-4">
             <div className="card-surface aspect-square w-full max-w-[160px] overflow-hidden rounded-full p-2 sm:max-w-[280px] md:max-w-[360px] lg:max-w-[440px] xl:max-w-[520px]">
               <img
-                src={heroVisual}
-                alt="Mechanical design and simulation visual representing Kottapalli Bharath's work"
+                src={castle}
+                alt="Illustrated castle fortress under a full moon"
                 width={520}
                 height={520}
                 className="h-full w-full rounded-full object-cover"
