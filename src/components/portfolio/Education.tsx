@@ -27,6 +27,14 @@ const education = [
     course:
       "Thermal Engineering, Automobile Electrical Systems, CAD, Basics of Automobile Engineering.",
   },
+  {
+    school: "Newgen School of Excellence",
+    place: "Hyderabad, TS",
+    period: "Jun 2015 – Mar 2018",
+    degree: "Matriculation — Graduated with Distinction",
+    gpa: "8.8 / 10.0",
+    course: "Mathematics, Physics, Chemistry, Biology, Social Studies, English.",
+  },
 ];
 
 const certifications = [
@@ -37,7 +45,6 @@ const certifications = [
   "ICT Design Week 2025 — Sri Sairam Engineering College, Chennai",
   "1st Prize — Designography, MechArena, Osmania University — 2023",
   "AutoCAD 2D & 3D Training (CISTOCADD)",
-  "Matriculation with distinction — Newgen School of Excellence (8.8 / 10)",
 ];
 
 const publications = [
@@ -50,7 +57,7 @@ export function Education() {
       <div className="mx-auto max-w-6xl px-5">
         <SectionHeading light="Education" accent="& Certifications" />
 
-        <div className="mt-12 grid gap-5 lg:grid-cols-3">
+        <div className="mt-12 grid gap-5 sm:grid-cols-2">
           {education.map((e) => (
             <article key={e.school} className="card-surface p-6">
               <GraduationCap className="size-6 text-primary" />
