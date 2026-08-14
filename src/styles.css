@@ -30,53 +30,64 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --font-display: "Poppins", ui-sans-serif, system-ui, sans-serif;
-  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cinzel", ui-serif, Georgia, serif;
+  --font-sans: "EB Garamond", ui-serif, Georgia, serif;
 }
 
 :root {
-  --radius: 0.9rem;
-  --background: oklch(0.14 0.008 150);
-  --foreground: oklch(0.97 0.005 150);
-  --card: oklch(0.19 0.012 155);
-  --card-foreground: oklch(0.97 0.005 150);
-  --popover: oklch(0.19 0.012 155);
-  --popover-foreground: oklch(0.97 0.005 150);
-  --primary: oklch(0.82 0.24 143);
-  --primary-foreground: oklch(0.16 0.03 150);
-  --secondary: oklch(0.24 0.02 155);
-  --secondary-foreground: oklch(0.97 0.005 150);
-  --muted: oklch(0.22 0.014 155);
-  --muted-foreground: oklch(0.72 0.015 155);
-  --accent: oklch(0.72 0.2 150);
-  --accent-foreground: oklch(0.15 0.03 150);
-  --destructive: oklch(0.6 0.22 27);
+  --radius: 0.35rem;
+  /* Midnight castle sky */
+  --background: oklch(0.16 0.045 265);
+  --foreground: oklch(0.95 0.02 90);
+  --card: oklch(0.22 0.05 268);
+  --card-foreground: oklch(0.95 0.02 90);
+  --popover: oklch(0.22 0.05 268);
+  --popover-foreground: oklch(0.95 0.02 90);
+  /* Enchanted gold */
+  --primary: oklch(0.8 0.14 85);
+  --primary-foreground: oklch(0.18 0.05 265);
+  --secondary: oklch(0.27 0.05 268);
+  --secondary-foreground: oklch(0.95 0.02 90);
+  --muted: oklch(0.25 0.045 268);
+  --muted-foreground: oklch(0.78 0.03 85);
+  /* House crimson */
+  --accent: oklch(0.48 0.17 25);
+  --accent-foreground: oklch(0.96 0.02 90);
+  --destructive: oklch(0.55 0.2 27);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.28 0.02 155);
-  --input: oklch(0.24 0.02 155);
-  --ring: oklch(0.82 0.24 143);
+  --border: oklch(0.36 0.06 268);
+  --input: oklch(0.24 0.05 268);
+  --ring: oklch(0.8 0.14 85);
 
   --gradient-glow: radial-gradient(
-      55% 55% at 8% 4%,
-      color-mix(in oklab, var(--primary) 26%, transparent),
+      60% 55% at 12% 6%,
+      color-mix(in oklab, var(--primary) 20%, transparent),
       transparent 70%
     ),
     radial-gradient(
-      45% 45% at 95% 15%,
-      color-mix(in oklab, var(--primary) 16%, transparent),
+      50% 50% at 92% 12%,
+      color-mix(in oklab, var(--accent) 30%, transparent),
       transparent 70%
     );
   --gradient-card: linear-gradient(
     160deg,
-    color-mix(in oklab, var(--primary) 4%, var(--card)),
-    color-mix(in oklab, var(--primary) 16%, var(--card))
+    color-mix(in oklab, var(--primary) 5%, var(--card)),
+    color-mix(in oklab, var(--accent) 14%, var(--card))
   );
   --gradient-cta: linear-gradient(
     100deg,
-    color-mix(in oklab, var(--primary) 85%, white),
+    color-mix(in oklab, var(--primary) 80%, white),
     var(--primary)
   );
-  --shadow-glow: 0 24px 70px -30px color-mix(in oklab, var(--primary) 70%, transparent);
+  --shadow-glow: 0 22px 60px -26px color-mix(in oklab, var(--primary) 75%, transparent);
+  --starfield:
+    radial-gradient(1.6px 1.6px at 12% 18%, color-mix(in oklab, var(--primary) 80%, white), transparent),
+    radial-gradient(1.2px 1.2px at 32% 62%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1.8px 1.8px at 58% 22%, color-mix(in oklab, var(--primary) 70%, white), transparent),
+    radial-gradient(1.2px 1.2px at 78% 48%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1.5px 1.5px at 88% 12%, color-mix(in oklab, var(--primary) 70%, white), transparent),
+    radial-gradient(1.1px 1.1px at 22% 82%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(1.4px 1.4px at 68% 86%, color-mix(in oklab, var(--primary) 60%, white), transparent);
 }
 
 @layer base {
@@ -92,13 +103,40 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
+    background-image: var(--starfield);
+    background-attachment: fixed;
   }
 
   h1,
   h2,
   h3 {
     font-family: var(--font-display);
-    letter-spacing: -0.02em;
+    letter-spacing: 0.01em;
+  }
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+  45% {
+    opacity: 0.82;
+    filter: brightness(1.15);
+  }
+  70% {
+    opacity: 0.92;
+  }
+}
+
+@keyframes float-candle {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }
 
@@ -114,10 +152,24 @@
   box-shadow: var(--shadow-glow);
 }
 
+@utility candle-float {
+  animation: float-candle 6s ease-in-out infinite;
+}
+
+@utility flicker {
+  animation: flicker 4s ease-in-out infinite;
+}
+
+@utility rune-divider {
+  color: color-mix(in oklab, var(--primary) 85%, white);
+  letter-spacing: 0.6em;
+}
+
 @utility card-surface {
   background-image: var(--gradient-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-2xl);
+  border: 1px solid color-mix(in oklab, var(--primary) 28%, var(--border));
+  border-radius: var(--radius-lg);
+  box-shadow: inset 0 1px 0 color-mix(in oklab, var(--primary) 18%, transparent);
   transition:
     transform 0.35s ease,
     border-color 0.35s ease,
@@ -125,7 +177,7 @@
 
   &:hover {
     transform: translateY(-6px);
-    border-color: color-mix(in oklab, var(--primary) 55%, var(--border));
+    border-color: color-mix(in oklab, var(--primary) 70%, var(--border));
     box-shadow: var(--shadow-glow);
   }
 }
@@ -133,6 +185,9 @@
 @utility cta-surface {
   background-image: var(--gradient-cta);
   color: var(--color-primary-foreground);
+  border: 1px solid color-mix(in oklab, var(--primary) 60%, white);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   transition:
     filter 0.3s ease,
     box-shadow 0.3s ease;
@@ -144,8 +199,8 @@
 }
 
 @utility pill {
-  border: 1px solid color-mix(in oklab, var(--primary) 40%, var(--border));
+  border: 1px solid color-mix(in oklab, var(--primary) 45%, var(--border));
   border-radius: 9999px;
-  color: color-mix(in oklab, var(--primary) 80%, white);
-  background-color: color-mix(in oklab, var(--primary) 8%, transparent);
+  color: color-mix(in oklab, var(--primary) 85%, white);
+  background-color: color-mix(in oklab, var(--primary) 10%, transparent);
 }
