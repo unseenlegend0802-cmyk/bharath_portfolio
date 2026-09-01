@@ -59,7 +59,7 @@ export function Education() {
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2">
           {education.map((e) => (
-            <article key={e.school} className="card-surface p-6">
+            <article key={e.school} className="card-surface spell-card p-6">
               <GraduationCap className="size-6 text-primary" />
               <p className="mt-4 text-xs tracking-widest text-muted-foreground uppercase">
                 {e.period}
@@ -73,7 +73,7 @@ export function Education() {
           ))}
         </div>
 
-        <div className="card-surface mt-6 p-6">
+        <div className="card-surface spell-card mt-6 p-6">
           <div className="flex min-w-0 items-center gap-3">
             <Award className="size-6 shrink-0 text-primary" />
             <h3 className="truncate text-lg font-semibold">Certifications &amp; Achievements</h3>

@@ -36,7 +36,7 @@ export function About() {
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2">
           {highlights.map((h) => (
-            <article key={h.title} className="card-surface p-6">
+            <article key={h.title} className="card-surface spell-card p-6">
               <h.icon className="size-6 text-primary" />
               <h3 className="mt-4 text-lg font-semibold">{h.title}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{h.body}</p>
