@@ -51,7 +51,7 @@ export function Projects() {
 
         <div className="mt-12 grid gap-5 md:grid-cols-3">
           {projects.map((p) => (
-            <article key={p.no} className="card-surface group relative p-7">
+            <article key={p.no} className="card-surface spell-card group relative p-7">
               <ArrowUpRight className="absolute top-6 right-6 size-5 text-muted-foreground transition-colors group-hover:text-primary" />
               <p className="font-display text-3xl font-bold text-primary">{p.no}</p>
               <h3 className="mt-4 pr-8 text-lg font-semibold">{p.title}</h3>

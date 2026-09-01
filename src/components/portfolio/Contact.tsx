@@ -67,7 +67,7 @@ export function Contact() {
                 href={d.href}
                 target="_blank"
                 rel="noreferrer"
-                className="card-surface grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-4 p-5"
+                className="card-surface spell-card grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-4 p-5"
               >
                 <d.icon className="size-5 shrink-0 text-primary" />
                 <span className="min-w-0">
@@ -81,7 +81,7 @@ export function Contact() {
               href="https://linkedin.com/in/kottapallibharath7993796846"
               target="_blank"
               rel="noreferrer"
-              className="card-surface grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 p-5"
+              className="card-surface spell-card grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 p-5"
             >
               <span className="min-w-0">
                 <span className="block text-sm font-semibold">LinkedIn</span>
