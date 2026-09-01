@@ -1,5 +1,6 @@
 import { ArrowDown, Download, Linkedin, Mail, Sparkles } from "lucide-react";
 import castle from "@/assets/hogwarts-castle.jpg";
+import { Particles } from "./Particles";
 
 export function Hero() {
   return (
@@ -21,6 +22,8 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 -z-10"
         style={{ backgroundImage: "var(--gradient-glow)" }}
       />
+
+      <Particles />
 
       {/* floating candles */}
       {[
