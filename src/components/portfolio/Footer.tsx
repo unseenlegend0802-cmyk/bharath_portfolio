@@ -2,12 +2,12 @@ import { Link } from "@tanstack/react-router";
 import { Linkedin, Mail, MapPin, Phone, Wand2 } from "lucide-react";
 
 const sections = [
-  { label: "About", href: "/#about" },
-  { label: "Skills", href: "/#skills" },
-  { label: "Projects", href: "/projects" },
-  { label: "Education", href: "/#education" },
-  { label: "Contact", href: "/#contact" },
-];
+  { label: "About", to: "/", hash: "about" },
+  { label: "Skills", to: "/", hash: "skills" },
+  { label: "Projects", to: "/projects", hash: undefined },
+  { label: "Education", to: "/", hash: "education" },
+  { label: "Contact", to: "/", hash: "contact" },
+] as const;
 
 export function Footer() {
   return (
@@ -34,8 +34,8 @@ export function Footer() {
           </h3>
           <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
             {sections.map((s) => (
-              <li key={s.href}>
-                <Link to={s.href} className="spell-link hover:text-primary">
+              <li key={s.label}>
+                <Link to={s.to} hash={s.hash} className="spell-link hover:text-primary">
                   {s.label}
                 </Link>
               </li>
