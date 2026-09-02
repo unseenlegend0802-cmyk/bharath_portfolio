@@ -4,7 +4,7 @@ import { Linkedin, Mail, MapPin, Phone, Wand2 } from "lucide-react";
 const sections = [
   { label: "About", to: "/", hash: "about" },
   { label: "Skills", to: "/", hash: "skills" },
-  { label: "Projects", to: "/projects", hash: undefined },
+  { label: "Projects", to: "/projects", hash: "" },
   { label: "Education", to: "/", hash: "education" },
   { label: "Contact", to: "/", hash: "contact" },
 ] as const;
