@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { ArrowRight, ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Loader2, Mail, MapPin, Phone } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
+import { supabase } from "@/integrations/supabase/client";
 
 const details = [
   {
@@ -19,7 +20,25 @@ const details = [
 ];
 
 export function Contact() {
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+
+  const onSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("sending");
+    const { error } = await supabase.from("contact_messages").insert({
+      name: form.name.trim(),
+      email: form.email.trim(),
+      message: form.message.trim(),
+    });
+    if (error) {
+      console.error(error);
+      setStatus("error");
+      return;
+    }
+    setForm({ name: "", email: "", message: "" });
+    setStatus("sent");
+  };
 
   return (
     <section id="contact" className="glow-surface py-20">
@@ -27,37 +46,58 @@ export function Contact() {
         <SectionHeading light="Contact" accent="Me" />
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              setSent(true);
-            }}
-            className="space-y-4"
-          >
+          <form onSubmit={onSubmit} className="space-y-4">
             <input
               required
+              maxLength={120}
+              value={form.name}
+              onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
               placeholder="Your name"
               className="w-full rounded-xl border border-border bg-input px-4 py-3 text-sm outline-none placeholder:text-muted-foreground focus:border-primary"
             />
             <input
               required
               type="email"
+              maxLength={200}
+              value={form.email}
+              onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
               placeholder="Your email"
               className="w-full rounded-xl border border-border bg-input px-4 py-3 text-sm outline-none placeholder:text-muted-foreground focus:border-primary"
             />
             <textarea
               required
               rows={6}
+              maxLength={5000}
+              value={form.message}
+              onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
               placeholder="Tell me about the opportunity..."
               className="w-full rounded-xl border border-border bg-input px-4 py-3 text-sm outline-none placeholder:text-muted-foreground focus:border-primary"
             />
             <button
               type="submit"
-              className="cta-surface inline-flex w-full items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold"
+              disabled={status === "sending"}
+              className="cta-surface inline-flex w-full items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold disabled:opacity-70"
             >
-              {sent ? "Thanks — I'll be in touch!" : "Send message"}{" "}
-              <ArrowRight className="size-4" />
+              {status === "sending" ? (
+                <>
+                  Sending your owl <Loader2 className="size-4 animate-spin" />
+                </>
+              ) : (
+                <>
+                  Send message <ArrowRight className="size-4" />
+                </>
+              )}
             </button>
+            {status === "sent" && (
+              <p className="text-sm text-primary" role="status">
+                Your owl has been sent — I&apos;ll reply to you soon.
+              </p>
+            )}
+            {status === "error" && (
+              <p className="text-sm text-destructive" role="alert">
+                The owl got lost. Please try again, or email me directly.
+              </p>
+            )}
           </form>
 
           <div className="space-y-4">
