@@ -1,5 +1,4 @@
 import { ArrowDown, Download, Linkedin, Mail, Sparkles } from "lucide-react";
-import castle from "@/assets/hogwarts-castle.jpg";
 import wizardPortrait from "@/assets/bharath-wizard.png.asset.json";
 
 import { Particles } from "./Particles";
@@ -7,18 +6,6 @@ import { Particles } from "./Particles";
 export function Hero() {
   return (
     <section id="home" className="glow-surface relative overflow-hidden pt-32 pb-20 md:pt-40">
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10"
-        style={{
-          backgroundImage: `url(${castle})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center 30%",
-          opacity: 0.55,
-          maskImage: "linear-gradient(to bottom, black 20%, transparent 95%)",
-          WebkitMaskImage: "linear-gradient(to bottom, black 20%, transparent 95%)",
-        }}
-      />
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10"
