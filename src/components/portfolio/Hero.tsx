@@ -1,5 +1,7 @@
 import { ArrowDown, Download, Linkedin, Mail, Sparkles } from "lucide-react";
 import castle from "@/assets/hogwarts-castle.jpg";
+import wizardPortrait from "@/assets/bharath-wizard.png.asset.json";
+
 import { Particles } from "./Particles";
 
 export function Hero() {
@@ -108,13 +110,14 @@ export function Hero() {
           <div className="flex flex-col items-center justify-center gap-3 sm:gap-4">
             <div className="card-surface aspect-square w-full max-w-[160px] overflow-hidden rounded-full p-2 sm:max-w-[280px] md:max-w-[360px] lg:max-w-[440px] xl:max-w-[520px]">
               <img
-                src={castle}
-                alt="Illustrated castle fortress under a full moon"
+                src={wizardPortrait.url}
+                alt="Kottapalli Bharath in wizard robes flying a broomstick past a moonlit castle"
                 width={520}
                 height={520}
                 className="h-full w-full rounded-full object-cover"
               />
             </div>
+
             <div className="card-surface w-fit px-3 py-2 text-center sm:px-4 sm:py-3">
               <p className="font-display text-base font-bold text-primary sm:text-xl md:text-2xl">
                 9.09
