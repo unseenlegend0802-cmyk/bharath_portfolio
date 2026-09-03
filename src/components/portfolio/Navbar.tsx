@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link, useNavigate } from "@tanstack/react-router";
 import { Menu, Wand2, X } from "lucide-react";
 
 const links = [
@@ -10,9 +11,11 @@ const links = [
 ];
 
 export function Navbar() {
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("#about");
+
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -42,8 +45,14 @@ export function Navbar() {
   const scrollTo = (href: string) => (e: React.MouseEvent) => {
     e.preventDefault();
     setOpen(false);
-    document.querySelector(href)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    const el = document.querySelector(href);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      void navigate({ to: "/", hash: href.slice(1) });
+    }
   };
+
 
   return (
     <header
@@ -75,6 +84,11 @@ export function Navbar() {
               </a>
             </li>
           ))}
+          <li>
+            <Link to="/projects" className="spell-link hover:text-primary">
+              Archive
+            </Link>
+          </li>
         </ul>
 
         <div className="flex items-center gap-2">
