@@ -84,6 +84,11 @@ export function Navbar() {
               </a>
             </li>
           ))}
+          <li>
+            <Link to="/projects" className="spell-link hover:text-primary">
+              Archive
+            </Link>
+          </li>
         </ul>
 
         <div className="flex items-center gap-2">
