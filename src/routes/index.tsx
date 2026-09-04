@@ -31,7 +31,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <PageTransition>
-      <div className="min-h-screen">
+      <div>
         <Navbar />
         <main>
           <Hero />

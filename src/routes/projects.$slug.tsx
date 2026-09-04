@@ -54,7 +54,7 @@ function ProjectDetail() {
 
   return (
     <PageTransition>
-      <div className="min-h-screen">
+      <div>
         <Navbar />
         <main className="pt-32 pb-16">
           <div className="mx-auto max-w-4xl px-5">
