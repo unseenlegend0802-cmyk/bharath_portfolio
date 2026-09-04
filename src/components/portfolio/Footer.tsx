@@ -11,7 +11,7 @@ const sections = [
 
 export function Footer() {
   return (
-    <footer className="glow-surface relative mt-10 overflow-hidden border-t border-primary/25">
+    <footer className="relative mt-10 overflow-hidden border-t border-primary/25">
       <div aria-hidden="true" className="rune-divider py-4 text-center text-xs">
         ✦ ⚯ ✦ ⚯ ✦
       </div>

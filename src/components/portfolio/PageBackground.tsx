@@ -8,11 +8,8 @@ export function PageBackground() {
         <img
           src={castle}
           alt=""
-          className="h-full w-full object-cover object-center opacity-70"
+          className="h-full w-full object-cover object-center"
         />
-        {/* Gradient washes keep text readable while the castle stays visible */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/50" />
       </div>
 
       {/* Enchanted starfield overlay */}
