@@ -29,7 +29,7 @@ export const Route = createFileRoute("/projects/")({
 function ProjectsIndex() {
   return (
     <PageTransition>
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen">
         <Navbar />
         <main className="pt-32 pb-16">
           <div className="mx-auto max-w-6xl px-5">

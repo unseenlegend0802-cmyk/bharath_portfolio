@@ -5,7 +5,7 @@ import { Particles } from "./Particles";
 
 export function Hero() {
   return (
-    <section id="home" className="glow-surface relative overflow-hidden pt-32 pb-20 md:pt-40">
+    <section id="home" className="relative overflow-hidden pt-32 pb-20 md:pt-40">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10"

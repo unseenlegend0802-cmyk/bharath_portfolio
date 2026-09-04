@@ -54,9 +54,9 @@ function ProjectDetail() {
 
   return (
     <PageTransition>
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen">
         <Navbar />
-        <main className="glow-surface pt-32 pb-16">
+        <main className="pt-32 pb-16">
           <div className="mx-auto max-w-4xl px-5">
             <Link
               to="/projects"
