@@ -131,6 +131,8 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       {/* Hogwarts castle page background sits behind every route */}
       <PageBackground />
+      {/* Magical wand cursor with sparkle trail + click glitter */}
+      <WandCursor />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
     </QueryClientProvider>
