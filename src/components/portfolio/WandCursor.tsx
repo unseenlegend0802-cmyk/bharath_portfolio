@@ -137,18 +137,18 @@ export function WandCursor() {
       <div ref={wandRef} aria-hidden="true" className="wand-cursor">
         <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
           {/* glow tip */}
-          <circle cx="26" cy="8" r="5" fill="hsl(var(--primary) / 0.35)" />
-          <circle cx="26" cy="8" r="2.2" fill="hsl(var(--primary))" />
+          <circle cx="26" cy="8" r="5" fill="color-mix(in oklab, var(--primary) 35%, transparent)" />
+          <circle cx="26" cy="8" r="2.2" fill="var(--primary)" />
           {/* wand shaft */}
           <path
             d="M4 30 L24 10"
-            stroke="hsl(var(--primary))"
+            stroke="var(--primary)"
             strokeWidth="2.6"
             strokeLinecap="round"
           />
           <path
             d="M4 30 L13 21"
-            stroke="hsl(var(--foreground) / 0.55)"
+            stroke="color-mix(in oklab, var(--foreground) 55%, transparent)"
             strokeWidth="2.6"
             strokeLinecap="round"
           />
