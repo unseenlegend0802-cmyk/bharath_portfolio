@@ -133,24 +133,50 @@ export function WandCursor() {
     <>
       {/* sparkle layer */}
       <div ref={layerRef} aria-hidden="true" className="pointer-events-none fixed inset-0 z-[90]" />
-      {/* the wand itself */}
+      {/* the wand itself — Harry's holly wand: knobbly dark handle, slender shaft, glowing tip */}
       <div ref={wandRef} aria-hidden="true" className="wand-cursor">
-        <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-          {/* glow tip */}
-          <circle cx="26" cy="8" r="5" fill="color-mix(in oklab, var(--primary) 35%, transparent)" />
-          <circle cx="26" cy="8" r="2.2" fill="var(--primary)" />
-          {/* wand shaft */}
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+          {/* magic glow at the tip (upper-left) */}
+          <circle cx="6" cy="6" r="6" fill="color-mix(in oklab, var(--primary) 30%, transparent)" />
+          <circle cx="6" cy="6" r="2.4" fill="color-mix(in oklab, var(--primary) 80%, white)" />
+          {/* slender wooden shaft, tapering toward the tip */}
           <path
-            d="M4 30 L24 10"
-            stroke="var(--primary)"
-            strokeWidth="2.6"
+            d="M6 6 L27 27"
+            stroke="#8a6a45"
+            strokeWidth="2.2"
             strokeLinecap="round"
           />
           <path
-            d="M4 30 L13 21"
-            stroke="color-mix(in oklab, var(--foreground) 55%, transparent)"
-            strokeWidth="2.6"
+            d="M6 6 L27 27"
+            stroke="#c9a370"
+            strokeWidth="0.9"
             strokeLinecap="round"
+          />
+          {/* transition collar */}
+          <path
+            d="M26 26 L30 30"
+            stroke="#5d4530"
+            strokeWidth="3.4"
+            strokeLinecap="round"
+          />
+          {/* knobbly dark handle */}
+          <path
+            d="M29 29 L42 42"
+            stroke="#3d2c1e"
+            strokeWidth="4.6"
+            strokeLinecap="round"
+          />
+          {/* handle knots */}
+          <circle cx="32.5" cy="32.5" r="3" fill="#33241a" />
+          <circle cx="37" cy="37" r="3.3" fill="#2c1e15" />
+          <circle cx="41.5" cy="41.5" r="3.6" fill="#241812" />
+          {/* worn highlight along the handle */}
+          <path
+            d="M30.5 28.5 L40.5 38.5"
+            stroke="#6b4f33"
+            strokeWidth="1"
+            strokeLinecap="round"
+            opacity="0.7"
           />
         </svg>
       </div>
