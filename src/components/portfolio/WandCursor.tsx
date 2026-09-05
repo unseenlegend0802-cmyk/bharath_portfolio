@@ -39,7 +39,7 @@ export function WandCursor() {
     const spawn = (sx: number, sy: number, burst: boolean) => {
       if (sparkles.length > 60) return;
       const el = document.createElement("span");
-      el.textContent = GLYPHS[Math.floor(Math.random() * GLYPHS.length)];
+      el.textContent = GLYPHS[Math.floor(Math.random() * GLYPHS.length)] ?? "✦";
       el.className = "wand-sparkle";
       const size = burst ? 10 + Math.random() * 10 : 6 + Math.random() * 7;
       el.style.fontSize = `${size}px`;
@@ -97,6 +97,7 @@ export function WandCursor() {
 
       for (let i = sparkles.length - 1; i >= 0; i--) {
         const s = sparkles[i];
+        if (!s) continue;
         const age = now - s.born;
         if (age >= s.ttl) {
           s.el.remove();
