@@ -12,6 +12,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { PageBackground } from "@/components/portfolio/PageBackground";
+import { WandCursor } from "@/components/portfolio/WandCursor";
 
 function NotFoundComponent() {
   return (
@@ -130,6 +131,8 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       {/* Hogwarts castle page background sits behind every route */}
       <PageBackground />
+      {/* Magical wand cursor with sparkle trail + click glitter */}
+      <WandCursor />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
     </QueryClientProvider>

@@ -340,3 +340,47 @@
     display: none;
   }
 }
+
+/* ─── Magical wand cursor ─── */
+@media (pointer: fine) {
+  .wand-cursor-active,
+  .wand-cursor-active * {
+    cursor: none !important;
+  }
+}
+
+.wand-cursor {
+  position: fixed;
+  top: -6px;
+  left: -6px;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  filter: drop-shadow(0 0 6px hsl(var(--primary) / 0.65));
+  will-change: transform;
+}
+
+.wand-cursor-cast svg {
+  animation: wand-cast 0.26s ease-out;
+}
+
+@keyframes wand-cast {
+  0% { transform: rotate(0deg) scale(1); }
+  40% { transform: rotate(-24deg) scale(1.12); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+
+.wand-sparkle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  color: hsl(var(--primary));
+  text-shadow: 0 0 6px hsl(var(--primary) / 0.9), 0 0 14px hsl(var(--primary) / 0.5);
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wand-cursor-cast svg { animation: none; }
+}
