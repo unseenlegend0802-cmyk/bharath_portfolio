@@ -70,8 +70,8 @@ export function WandCursor() {
       const now = performance.now();
       if (now - lastTrail > 55) {
         lastTrail = now;
-        // trail sparkles drift from the wand tip (upper-right of the wand graphic)
-        spawn(tx + 14, ty - 14, false);
+        // trail sparkles drift from the wand tip (upper-left of the wand graphic)
+        spawn(tx + 2, ty - 2, false);
       }
     };
 
@@ -80,7 +80,7 @@ export function WandCursor() {
       window.setTimeout(() => wand.classList.remove("wand-cursor-cast"), 260);
       if (reduced) return;
       for (let i = 0; i < 14; i++) {
-        spawn(e.clientX + 14, e.clientY - 14, true);
+        spawn(e.clientX + 2, e.clientY - 2, true);
       }
     };
 
