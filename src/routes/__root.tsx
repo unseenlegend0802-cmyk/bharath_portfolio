@@ -12,6 +12,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { PageBackground } from "@/components/portfolio/PageBackground";
+import { WandCursor } from "@/components/portfolio/WandCursor";
 
 function NotFoundComponent() {
   return (
