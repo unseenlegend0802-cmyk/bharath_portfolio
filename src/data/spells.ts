@@ -1,10 +1,5 @@
 export type SpellId =
-  | "lumos"
-  | "nox"
-  | "expelliarmus"
-  | "wingardium-leviosa"
-  | "alohomora"
-  | "finite";
+  "lumos" | "nox" | "expelliarmus" | "wingardium-leviosa" | "alohomora" | "finite";
 
 export type Spell = {
   id: SpellId;

@@ -83,8 +83,14 @@ export function SpellMenu() {
     [],
   );
 
-  const left = Math.min(Math.max(pos.x + 18, 12), (typeof window !== "undefined" ? window.innerWidth : 1200) - 250);
-  const top = Math.min(Math.max(pos.y - 20, 12), (typeof window !== "undefined" ? window.innerHeight : 800) - 300);
+  const left = Math.min(
+    Math.max(pos.x + 18, 12),
+    (typeof window !== "undefined" ? window.innerWidth : 1200) - 250,
+  );
+  const top = Math.min(
+    Math.max(pos.y - 20, 12),
+    (typeof window !== "undefined" ? window.innerHeight : 800) - 300,
+  );
 
   return (
     <>
