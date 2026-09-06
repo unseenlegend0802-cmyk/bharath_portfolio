@@ -386,3 +386,97 @@
 @media (prefers-reduced-motion: reduce) {
   .wand-cursor-cast svg { animation: none; }
 }
+
+/* ─── Spell menu + cast effects ─── */
+.spell-menu {
+  animation: scale-in 0.18s ease-out both;
+  box-shadow: var(--shadow-glow);
+}
+
+@keyframes incantation-rise {
+  0% { opacity: 0; transform: translate(-50%, 12px) scale(0.9); }
+  25% { opacity: 1; transform: translate(-50%, 0) scale(1); }
+  75% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -14px) scale(1.04); }
+}
+
+.spell-incantation {
+  text-shadow:
+    0 0 10px color-mix(in oklab, var(--primary) 85%, transparent),
+    0 0 26px color-mix(in oklab, var(--primary) 45%, transparent);
+  animation: incantation-rise 1.6s ease-out both;
+}
+
+@keyframes cast-flash {
+  0% { opacity: 0; }
+  18% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.cast-lumos::after,
+.cast-nox::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  pointer-events: none;
+  animation: cast-flash 2.2s ease-out both;
+}
+
+.cast-lumos::after {
+  background-image: radial-gradient(
+    60% 55% at 50% 45%,
+    color-mix(in oklab, var(--primary) 55%, white),
+    transparent 72%
+  );
+  mix-blend-mode: screen;
+}
+
+.cast-nox::after {
+  background-color: oklch(0.06 0.02 265);
+  animation-duration: 2.6s;
+}
+
+@keyframes spell-jolt {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  15% { transform: translate3d(-10px, 4px, 0) rotate(-1.2deg); }
+  35% { transform: translate3d(9px, -3px, 0) rotate(1deg); }
+  55% { transform: translate3d(-6px, 2px, 0) rotate(-0.6deg); }
+  75% { transform: translate3d(4px, -1px, 0) rotate(0.3deg); }
+}
+
+.cast-expelliarmus .card-surface {
+  animation: spell-jolt 0.7s ease-in-out both;
+}
+
+@keyframes spell-levitate {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-22px); }
+}
+
+.cast-wingardium-leviosa .card-surface {
+  animation: spell-levitate 2.2s ease-in-out both;
+}
+
+@keyframes spell-unlock {
+  0%, 100% {
+    border-color: color-mix(in oklab, var(--primary) 28%, var(--border));
+    box-shadow: none;
+  }
+  50% {
+    border-color: color-mix(in oklab, var(--primary) 95%, white);
+    box-shadow: 0 0 28px -4px color-mix(in oklab, var(--primary) 70%, transparent);
+  }
+}
+
+.cast-alohomora .card-surface {
+  animation: spell-unlock 2.2s ease-in-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cast-expelliarmus .card-surface,
+  .cast-wingardium-leviosa .card-surface,
+  .cast-alohomora .card-surface,
+  .cast-lumos::after,
+  .cast-nox::after { animation: none; }
+}
