@@ -5,6 +5,7 @@ const sections = [
   { label: "About", to: "/", hash: "about" },
   { label: "Skills", to: "/", hash: "skills" },
   { label: "Projects", to: "/projects", hash: "" },
+  { label: "Spellbook", to: "/spellbook", hash: "" },
   { label: "Education", to: "/", hash: "education" },
   { label: "Contact", to: "/", hash: "contact" },
 ] as const;
