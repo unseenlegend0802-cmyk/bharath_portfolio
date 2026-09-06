@@ -3,15 +3,13 @@ import castle from "@/assets/hogwarts-castle.jpg";
 export function PageBackground() {
   return (
     <>
-      {/* Hogwarts castle — fixed page background, dimmed so text stays readable */}
+      {/* Hogwarts castle — fixed page background, dimmed so text stays readable.
+          The image is slightly oversized and gently sways so it never clips. */}
       <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-30">
         <img
           src={castle}
           alt=""
-          className="h-full w-full object-cover object-center"
-          style={{
-            filter: "brightness(0.52) contrast(0.92) saturate(1.05)",
-          }}
+          className="castle-wave h-full w-full object-cover object-center"
         />
       </div>
 
