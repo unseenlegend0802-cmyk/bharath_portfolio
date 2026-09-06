@@ -72,12 +72,16 @@ export function SpellMenu() {
       window.removeEventListener("pointerdown", onDown, true);
       window.removeEventListener("keydown", onKey);
       if (timerRef.current) window.clearTimeout(timerRef.current);
-      if (effectTimerRef.current) window.clearTimeout(effectTimerRef.current);
-      clearEffects();
     };
   }, [open]);
 
-  useEffect(() => () => clearEffects(), []);
+  useEffect(
+    () => () => {
+      if (effectTimerRef.current) window.clearTimeout(effectTimerRef.current);
+      clearEffects();
+    },
+    [],
+  );
 
   const left = Math.min(Math.max(pos.x + 18, 12), (typeof window !== "undefined" ? window.innerWidth : 1200) - 250);
   const top = Math.min(Math.max(pos.y - 20, 12), (typeof window !== "undefined" ? window.innerHeight : 800) - 300);
