@@ -13,6 +13,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { PageBackground } from "@/components/portfolio/PageBackground";
 import { WandCursor } from "@/components/portfolio/WandCursor";
+import { SpellMenu } from "@/components/portfolio/SpellMenu";
 
 function NotFoundComponent() {
   return (
@@ -133,6 +134,8 @@ function RootComponent() {
       <PageBackground />
       {/* Magical wand cursor with sparkle trail + click glitter */}
       <WandCursor />
+      {/* Dwell the wand to open the spell menu */}
+      <SpellMenu />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
     </QueryClientProvider>
