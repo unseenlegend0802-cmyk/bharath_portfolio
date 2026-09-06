@@ -39,11 +39,13 @@ function SpellbookPage() {
               <ArrowLeft className="size-4" /> Back to the castle
             </Link>
 
-            <SectionHeading
-              eyebrow="Standard Book of Spells"
-              title="The Spellbook"
-              subtitle="Hold the wand still anywhere on the site and a spell menu unfurls — each incantation below can be cast on the page."
-            />
+            <div className="mt-8">
+              <SectionHeading light="The" accent="Spellbook" />
+              <p className="mx-auto mt-4 max-w-2xl text-center text-sm text-muted-foreground">
+                Hold the wand still anywhere on the site and a spell menu unfurls — each incantation
+                below can be cast on the page.
+              </p>
+            </div>
 
             <div className="mt-10 grid gap-6 md:grid-cols-2">
               {spells.map((spell) => (
