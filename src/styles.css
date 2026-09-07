@@ -553,7 +553,7 @@
     filter: brightness(0.52) contrast(0.92) saturate(1.05);
   }
   33% {
-    transform: scale(1.06) translate(0. -1.2%) rotate(0.15deg);
+    transform: scale(1.06) translate(0, -1.2%) rotate(0.15deg);
     filter: brightness(0.54) contrast(0.92) saturate(1.05);
   }
   66% {
