@@ -544,3 +544,31 @@
     animation: none;
   }
 }
+
+/* ─── Castle wave background animation ─── */
+@keyframes castle-sway {
+  0%,
+  100% {
+    transform: scale(1.06) translate(0, 0) rotate(0deg);
+    filter: brightness(0.52) contrast(0.92) saturate(1.05);
+  }
+  33% {
+    transform: scale(1.06) translate(0. -1.2%) rotate(0.15deg);
+    filter: brightness(0.54) contrast(0.92) saturate(1.05);
+  }
+  66% {
+    transform: scale(1.06) translate(0, 1%) rotate(-0.12deg);
+    filter: brightness(0.51) contrast(0.92) saturate(1.05);
+  }
+}
+
+.castle-wave {
+  animation: castle-sway 18s ease-in-out infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .castle-wave {
+    animation: none;
+  }
+}
