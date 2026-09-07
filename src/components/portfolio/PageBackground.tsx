@@ -1,14 +1,17 @@
-import castle from "@/assets/hogwarts-castle.jpg";
+import castleVideo from "@/assets/hogwarts-castle.mp4.asset.json";
 
 export function PageBackground() {
   return (
     <>
-      {/* Hogwarts castle — fixed page background, dimmed so text stays readable.
-          The image is slightly oversized and gently sways so it never clips. */}
-      <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-30">
-        <img
-          src={castle}
-          alt=""
+      {/* Hogwarts castle — fixed page background video, dimmed so text stays readable. */}
+      <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-30 overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          src={castleVideo.url}
           className="castle-wave h-full w-full object-cover object-center"
         />
       </div>
